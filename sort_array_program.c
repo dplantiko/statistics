@@ -25,11 +25,11 @@ int main()
         }
     }
     
-    //Print the sorted array
+    /*Print the sorted array
     for(i=0;i<=length;i++)
     {
         printf("%d\n",array[i]);
-    }
+    }*/
     
     return 0;
 }
