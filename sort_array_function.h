@@ -8,21 +8,21 @@ void swap(int *i,int *j)
     return;
 }
 
-void sortArray(int *array[], int length)
+void sortArray(int array[], int length)
 {
-    for(int i=0;i<=length;i++)
+    int i,j;
+    for(i=0;i<=length;i++)
     {
-        for(int j=i+1;j<length;j++)
+        for(j=i+1;j<length;j++)
         {
-            if(*array[i]>*array[j]) swap(array[i],array[j]);
+            if(array[i]>array[j]) swap(&array[i],&array[j]);
         }
     }
     
-    for(i=0;i<=length;i++)
+    /*for(i=0;i<=length;i++)
     {
-        printf("%d\n",*array[i]);
-    }
+        printf("%d\n",array[i]);
+    }*/
     
     return;
 }
-
