@@ -19,7 +19,7 @@ void sortArray(int array[], int length)
         }
     }
     
-    /*for(i=0;i<=length;i++)
+    /*for(i=0;i<=length-1;i++)
     {
         printf("%d\n",array[i]);
     }*/
