@@ -17,12 +17,19 @@ void sortArray(int array[], int length)
         {
             if(array[i]>array[j]) swap(&array[i],&array[j]);
         }
-    }
-    
-    /*for(i=0;i<=length-1;i++)
-    {
-        printf("%d\n",array[i]);
-    }*/
+    }    
     
     return;
 }
+
+void printArray(int array[], int length)
+{
+    int i;
+    for(i=0;i<=length-1;i++)
+    {
+        printf("%d\n",array[i]);
+    }
+    
+    return;
+}
+    
