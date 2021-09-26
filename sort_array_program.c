@@ -15,19 +15,22 @@ int main()
 {
     //Example array
     int array[]={1,5,3,2,7,8,9};
+    //length is the actual number of elements of the array
+    int length=(sizeof(array)/sizeof(int));
     
     //The algo itself are two nested for loops
     //This will sort the array elements from lowest to highest number
-    for(int i=0;i<=(sizeof(array)/sizeof(int));i++)
+    //i and j are index variables
+    for(int i=0;i<=length;i++)
     {
-        for(int j=i+1;j<(sizeof(array)/sizeof(int));j++)
+        for(int j=i+1;j<length;j++)
         {
             if(array[i]>array[j]) swap(&array[i],&array[j]);
         }
     }
     
     //Print the sorted array
-    for(i=0;i<(sizeof(array)/sizeof(int));i++)
+    for(i=0;i<=length;i++)
     {
         printf("%d\n",array[i]);
     }
