@@ -133,11 +133,9 @@ float calc_p_quantil(float array[], int length, float p)
     j=length;
 
     //Check for p*length is integer or not
-    h=j;
-    h=p*h;
-    j=p*j;
+    h=p*length;
 
-    if((h-j)<=0.0001)
+    if((h-(p*length)<=0.0001))
     {
         i=(int)(h-1);
         return 0.5*(array[i]+array[(i+1)]);
