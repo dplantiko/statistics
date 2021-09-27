@@ -31,17 +31,12 @@ void print_array(float array[], int length)
         printf("%.2f ",array[i]);
     }
     printf("\n");
-
-    return;
 }
 
 //Calculates the difference between highest and lowest number
 float calc_range(float array[], int length)
-{
-    float r;
-    r=array[(length-1)]-array[0];
-    
-    return r;
+{    
+    return array[(length-1)]-array[0];
 }
 
 //Sum of all numbers of the array
