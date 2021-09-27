@@ -62,12 +62,8 @@ float calc_sum(float array[], int length)
 
 //Calculates the average
 float calc_avg(float array[], int length, float sum)
-{
-    float avg;
-    
-    avg=sum/length;
-    
-    return avg;
+{   
+    return sum/length;
 }
 
 //Lowest number
