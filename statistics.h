@@ -133,22 +133,21 @@ float calc_corr_sd(float array[], int length, float var)
 //50% of all Values are higher, 50% lower than Median
 float calc_median(float array[], int length)
 {
-    float median;
     int i;
     
     if(length%2 != 0)
     {
-        i=(length-1)/2;
-        median=array[i];
+        int i=(length-1)/2;
+        return array[i];
     }
     
     else if(length%2 == 0)
     {
-        i=(length/2)-1;
-        median=(array[i]+array[(i+1)])/2;
+        int i=(length/2)-1;
+        return (array[i]+array[(i+1)])/2;
     }
     
-    return median;
+    return 1;
 }
 
 //75% are less than Upper Quartil
