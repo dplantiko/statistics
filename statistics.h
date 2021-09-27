@@ -234,3 +234,29 @@ float calc_lower_quartil(float array[], int length)
     
     return lower_quartil;
 }
+
+float calc_p_quantil(float array[], int length, float p)
+{
+    float p_quantil,h,f;
+    int i;
+
+    sort_array(array,length);
+
+    //Check for p*length is integer or not
+    h=length;
+    h=p*h;
+    length=p*length;
+
+    if((h-length)<=0.0001)
+    {
+        i=(int)(h-1);
+        p_quantil=0.5*(array[i]+array[(i+1)]);
+    }
+    else
+    {
+        i=(int)h;
+        p_quantil=array[i];
+    }
+
+    return p_quantil;
+}
