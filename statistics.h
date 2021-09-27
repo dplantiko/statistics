@@ -20,9 +20,7 @@ void sort_array(float array[], int length)
 
 void print_array(float array[], int length)
 {
-    int i;
-    
-    for(i=0;i<=length-1;i++)
+    for(int i=0;i<=length-1;i++)
     {
         printf("%.2f ",array[i]);
     }
