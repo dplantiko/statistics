@@ -38,25 +38,9 @@ void print_array(float array[], int length)
     return;
 }
 
-void print_sorted_array(float array[], int length)
-{
-    
-    sort_array(array,length);
-    int i;
-    
-    for(i=0;i<=length-1;i++)
-    {
-        printf("%.2f ",array[i]);
-    }
-    printf("\n");
-
-    return;
-}
-
 //Calculates the difference between highest and lowest number
 float calc_range(float array[], int length)
 {
-    sort_array(array,length);
     float r;
     r=array[(length-1)]-array[0];
     
@@ -89,25 +73,22 @@ float calc_avg(float array[], int length)
 //Lowest number
 float calc_min(float array[], int length)
 {
-    sort_array(array,length);
-    
     return array[0];
 }
 
 //Highest number
 float calc_max(float array[], int length)
 {
-    sort_array(array,length);
+    int i=length;
     
-    return array[(length-1)];
+    return array[(i-1)];
 }
 
 //Variance (n = length)
-float calc_variance(float array[], int length)
+float calc_variance(float array[], int length, float avg)
 {
     int i;
-    float avg,s=0.0;
-    avg=calc_avg(array,length);
+    float s=0.0;
     
     for(i=0;i<=length-1;i++)
     {
@@ -118,11 +99,10 @@ float calc_variance(float array[], int length)
 }
 
 //Corrected Variance (n = length-1)
-float calc_corr_variance(float array[], int length)
+float calc_corr_variance(float array[], int length, float avg)
 {
     int i;
-    float avg,s=0.0;
-    avg=calc_avg(array,length);
+    float s=0.0;
     
     for(i=0;i<=length-1;i++)
     {
@@ -134,10 +114,10 @@ float calc_corr_variance(float array[], int length)
 
 //Standard Deviation (n = length)
 //Square root of Variance
-float calc_sd(float array[], int length)
+float calc_sd(float array[], int length, float var)
 {
-    float var,sd;
-    var=calc_variance(array,length);
+    float sd;
+
     sd=sqrt(var);
 
     return sd;
