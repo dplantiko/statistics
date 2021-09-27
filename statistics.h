@@ -18,8 +18,6 @@ void sort_array(float array[], int length)
             if(array[i]>array[j]) swap(&array[i],&array[j]);
         }
     }
-        
-    return;
 }
 
 void print_array(float array[], int length)
