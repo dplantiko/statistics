@@ -94,11 +94,7 @@ float calc_corr_variance(float array[], int length, float avg)
 //Square root of Variance
 float calc_sd(float array[], int length, float var)
 {
-    float sd;
-
-    sd=sqrt(var);
-
-    return sd;
+    return sqrt(var);
 }
 
 //50% of all Values are higher, 50% lower than Median
