@@ -107,22 +107,18 @@ float calc_sd(float array[], int length, float var)
 
 //50% of all Values are higher, 50% lower than Median
 float calc_median(float array[], int length)
-{
-    int i;
-    
+{   
     if(length%2 != 0)
     {
         int i=(length-1)/2;
         return array[i];
     }
     
-    else if(length%2 == 0)
+    else
     {
         int i=(length/2)-1;
         return (array[i]+array[(i+1)])/2;
     }
-    
-    return 1;
 }
 
 float calc_p_quantil(float array[], int length, float p)
