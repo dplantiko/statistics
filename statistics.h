@@ -152,7 +152,7 @@ float calc_median(float array[], int length)
 
 float calc_p_quantil(float array[], int length, float p)
 {
-    float p_quantil,h,f;
+    float h,f;
     int i,j;
     
     j=length;
@@ -165,12 +165,12 @@ float calc_p_quantil(float array[], int length, float p)
     if((h-j)<=0.0001)
     {
         i=(int)(h-1);
-        p_quantil=0.5*(array[i]+array[(i+1)]);
+        return 0.5*(array[i]+array[(i+1)]);
     }
     else
     {
         i=(int)h;
-        p_quantil=array[i];
+        return array[i];
     }
 
     return p_quantil;
