@@ -6,7 +6,6 @@ void swap(float *i, float *j)
     *j=temp;
 }
 
-
 //Sorts an array from lowest to highest number
 void sort_array(float array[], int length)
 {
