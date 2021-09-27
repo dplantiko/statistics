@@ -8,12 +8,10 @@ void swap(float *i, float *j)
 
 //Sorts an array from lowest to highest number
 void sort_array(float array[], int length)
-{
-    int i,j;
-        
-    for(i=0;i<=length-1;i++)
+{       
+    for(int i=0;i<=length-1;i++)
     {
-        for(j=i+1;j<length;j++)
+        for(int j=i+1;j<length;j++)
         {
             if(array[i]>array[j]) swap(&array[i],&array[j]);
         }
