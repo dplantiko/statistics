@@ -51,8 +51,8 @@ float calc_range(float array[], int length)
 float calc_sum(float array[], int length)
 {
     float s=0.0;
-    int i;
-    for(i=0;i<=length-1;i++)
+    
+    for(int i=0;i<=length-1;i++)
     {
         s=s+array[i];
     }
@@ -61,11 +61,11 @@ float calc_sum(float array[], int length)
 }
 
 //Calculates the average
-float calc_avg(float array[], int length)
+float calc_avg(float array[], int length, float sum)
 {
-    float avg,s;
-    s=calc_sum(array,length);
-    avg=s/length;
+    float avg;
+    
+    avg=sum/length;
     
     return avg;
 }
@@ -78,19 +78,16 @@ float calc_min(float array[], int length)
 
 //Highest number
 float calc_max(float array[], int length)
-{
-    int i=length;
-    
-    return array[(i-1)];
+{   
+    return array[(length-1)];
 }
 
 //Variance (n = length)
 float calc_variance(float array[], int length, float avg)
 {
-    int i;
     float s=0.0;
     
-    for(i=0;i<=length-1;i++)
+    for(int i=0;i<=length-1;i++)
     {
         s=s+((array[i]-avg)*(array[i]-avg));
     }
@@ -101,10 +98,9 @@ float calc_variance(float array[], int length, float avg)
 //Corrected Variance (n = length-1)
 float calc_corr_variance(float array[], int length, float avg)
 {
-    int i;
     float s=0.0;
     
-    for(i=0;i<=length-1;i++)
+    for(int i=0;i<=length-1;i++)
     {
         s=s+((array[i]-avg)*(array[i]-avg));
     }
@@ -125,10 +121,10 @@ float calc_sd(float array[], int length, float var)
 
 //Corrected Standard Deviation
 //Square root of Corrected Variance
-float calc_corr_sd(float array[], int length)
+float calc_corr_sd(float array[], int length, float var)
 {
-    float var,sd;
-    var=calc_corr_variance(array,length);
+    float sd;
+    
     sd=sqrt(var);
 
     return sd;
@@ -139,8 +135,6 @@ float calc_median(float array[], int length)
 {
     float median;
     int i;
-    
-    sort_array(array,length);
     
     if(length%2 != 0)
     {
@@ -164,8 +158,6 @@ float calc_upper_quartil(float array[], int length)
     float p,h,f;
     int i;
     p=0.75;
-    
-    sort_array(array,length);
     
     //Check for p*length is integer or not
     h=length;
@@ -194,8 +186,6 @@ float calc_lower_quartil(float array[], int length)
     int i;
     p=0.25;
     
-    sort_array(array,length);
-    
     //Check for p*length is integer or not
     h=length;
     h=p*h;
@@ -219,8 +209,6 @@ float calc_p_quantil(float array[], int length, float p)
 {
     float p_quantil,h,f;
     int i;
-
-    sort_array(array,length);
 
     //Check for p*length is integer or not
     h=length;
