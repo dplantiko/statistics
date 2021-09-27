@@ -119,17 +119,6 @@ float calc_sd(float array[], int length, float var)
     return sd;
 }
 
-//Corrected Standard Deviation
-//Square root of Corrected Variance
-float calc_corr_sd(float array[], int length, float var)
-{
-    float sd;
-    
-    sd=sqrt(var);
-
-    return sd;
-}
-
 //50% of all Values are higher, 50% lower than Median
 float calc_median(float array[], int length)
 {
