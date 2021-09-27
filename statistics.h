@@ -172,6 +172,4 @@ float calc_p_quantil(float array[], int length, float p)
         i=(int)h;
         return array[i];
     }
-
-    return p_quantil;
 }
