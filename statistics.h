@@ -150,71 +150,19 @@ float calc_median(float array[], int length)
     return 1;
 }
 
-//75% are less than Upper Quartil
-float calc_upper_quartil(float array[], int length)
-{
-    float upper_quartil;
-    float p,h,f;
-    int i;
-    p=0.75;
-    
-    //Check for p*length is integer or not
-    h=length;
-    h=p*h;
-    length=p*length;
-    
-    if((h-length)<=0.0001)
-    {
-        i=(int)(h-1);
-        upper_quartil=0.5*(array[i]+array[(i+1)]);
-    }
-    else
-    {
-        i=(int)h;
-        upper_quartil=array[i];
-    }
-    
-    return upper_quartil;
-}
-
-//25% are greater than Lower Quartil
-float calc_lower_quartil(float array[], int length)
-{
-    float lower_quartil;
-    float p,h,f;
-    int i;
-    p=0.25;
-    
-    //Check for p*length is integer or not
-    h=length;
-    h=p*h;
-    length=p*length;
-    
-    if((h-length)<=0.0001)
-    {
-        i=(int)(h-1);
-        lower_quartil=0.5*(array[i]+array[(i+1)]);
-    }
-    else
-    {
-        i=(int)h;
-        lower_quartil=array[i];
-    }
-    
-    return lower_quartil;
-}
-
 float calc_p_quantil(float array[], int length, float p)
 {
     float p_quantil,h,f;
-    int i;
+    int i,j;
+    
+    j=length;
 
     //Check for p*length is integer or not
-    h=length;
+    h=j;
     h=p*h;
-    length=p*length;
+    j=p*j;
 
-    if((h-length)<=0.0001)
+    if((h-j)<=0.0001)
     {
         i=(int)(h-1);
         p_quantil=0.5*(array[i]+array[(i+1)]);
