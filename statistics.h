@@ -4,8 +4,6 @@ void swap(float *i, float *j)
     temp=*i;
     *i=*j;
     *j=temp;
-    
-    return;
 }
 
 
