@@ -1,4 +1,4 @@
-//Program for Linear Regression
+//Program for simple Linear Regression
 //Approach: Method of Least Squares
 #include <stdio.h>
 
