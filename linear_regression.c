@@ -65,7 +65,7 @@ int main()
     float b=avgy-m*avgx;
     
     //printf("Axis Intersection Point = %.4f\n",b);
-    //printf("g(x) = %.4f*x + %.4f\n",m,b);
+    printf("g(x) = %.4f*x + %.4f\n",m,b);
     
     return 0;
 }
