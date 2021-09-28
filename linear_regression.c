@@ -18,8 +18,8 @@ int main()
         scanf("%f",&array[i][1]);
     }
     
-    /*
     //Example array
+    /*
     float array[7][2];
     //X Values          Y Values
     array[0][0]=100;    array[0][1]=40;
@@ -31,14 +31,17 @@ int main()
     array[6][0]=700;    array[6][1]=80;
     
     const int length=(sizeof(array)/2)/sizeof(float);
-     */
+    */
     
-    printf("%i\n",length);
+    //printf("Length = %i\n",length);
     
+    //Print the the entered Values
+    /*
     for(int i=0;i<=length-1;i++)
     {
         printf("x[%i] %.4f\ty[%i] %.4f\n",i,array[i][0],i,array[i][1]);
     }
+    */
     
     //Calculate Sum and Average
     float sumx=0;
