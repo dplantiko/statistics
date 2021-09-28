@@ -38,8 +38,8 @@ int main()
     float avgx=sumx/length;
     float avgy=sumy/length;
     
-    printf("Sum X Values = %.2f\nAverage X Values = %.2f\n",sumx,avgx);
-    printf("Sum Y Values = %.2f\nAverage Y Values = %.2f\n",sumy,avgy);
+    //printf("Sum X Values = %.2f\nAverage X Values = %.2f\n",sumx,avgx);
+    //printf("Sum Y Values = %.2f\nAverage Y Values = %.2f\n",sumy,avgy);
     
     //Calculate mount m
     //Calulate dividend and divisor
