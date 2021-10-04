@@ -14,33 +14,37 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 	
-	float x,p,q,d;
+	float x_1,x_2,p,q,d;
 	
 	p=atof(argv[1]);
 	q=atof(argv[2]);
 	
 	d=((p/2)*(p/2))-q;
+	
 	if(d>0)
 	{
 		printf("d=%f\n2 solutions\n",d);
+		
+		x_1=((-p)/2)+sqrt((p/2)*(p/2)-q);
+		printf("x1=%f\n",x);
+		
+		x_2=((-p)/2)-sqrt((p/2)*(p/2)-q);
+		printf("x2=%f\n",x);
 	}
+	
 	else if(d==0)
 	{
 		printf("d=%f\n1 solution\n",d);
+		
+		x_1=((-p)/2)+sqrt((p/2)*(p/2)-q);
+		printf("x1=%f\n",x);
 	}
+	
 	else if(d<0)
 	{
 		printf("d=%f\nNo solution\n",d);
 		return 0;
 	}
-
-	printf("p=%f\n",p);
-	printf("q=%f\n",q);
-
-	x=((-p)/2)+sqrt((p/2)*(p/2)-q);
-	printf("x1=%f\n",x);
-	x=((-p)/2)-sqrt((p/2)*(p/2)-q);
-	printf("x2=%f\n",x);
 
 	return 0;
 }
