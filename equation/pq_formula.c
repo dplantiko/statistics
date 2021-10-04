@@ -10,7 +10,12 @@ int main(int argc, char *argv[])
 {
 	if(argc<=1)
 	{
-		printf("Too less arguments.\n");
+		fprintf(stderr,"Too less arguments.\n");
+		return 1;
+	}
+	if(argc>3)
+	{
+		fprintf(stderr,"Too much arguments.\n");
 		return 1;
 	}
 	
@@ -23,27 +28,27 @@ int main(int argc, char *argv[])
 	
 	if(d>0)
 	{
-		printf("d=%f\n2 solutions\n",d);
+		printf("d=%.2f\n2 solutions\n",d);
 		
 		x_1=((-p)/2)+sqrt((p/2)*(p/2)-q);
-		printf("x1=%f\n",x_1);
+		printf("x1=%.2f\n",x_1);
 		
 		x_2=((-p)/2)-sqrt((p/2)*(p/2)-q);
-		printf("x2=%f\n",x_2);
+		printf("x2=%.2f\n",x_2);
 	}
 	
 	else if(d==0)
 	{
-		printf("d=%f\n1 solution\n",d);
+		printf("d=%.2f\n1 solution\n",d);
 		
 		x_1=((-p)/2)+sqrt((p/2)*(p/2)-q);
-		printf("x1=%f\n",x_1);
+		printf("x1=%.2f\n",x_1);
 	}
 	
 	else if(d<0)
 	{
-		printf("d=%f\nNo solution\n",d);
-		return 0;
+		printf("d=%.2f\nNo solution\n",d);
+		return 1;
 	}
 
 	return 0;
