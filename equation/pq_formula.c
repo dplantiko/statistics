@@ -18,6 +18,21 @@ int main(int argc, char *argv[])
 	
 	p=atof(argv[1]);
 	q=atof(argv[2]);
+	
+	d=((p/2)*(p/2))-q;
+	if(d>0)
+	{
+		printf("d=%f\n2 solutions\n",d);
+	}
+	else if(d==0)
+	{
+		printf("d=%f\n1 solution\n",d);
+	}
+	else if(d<0)
+	{
+		printf("d=%f\nNo solution\n",d);
+		return 0;
+	}
 
 	printf("p=%f\n",p);
 	printf("q=%f\n",q);
