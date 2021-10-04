@@ -30,10 +30,10 @@ int main(int argc, char *argv[])
 	{
 		printf("d=%.2f\n2 solutions\n",d);
 		
-		x_1=((-p)/2)+sqrt((p/2)*(p/2)-q);
+		x_1=((-p)/2)+sqrt(d);
 		printf("x1=%.2f\n",x_1);
 		
-		x_2=((-p)/2)-sqrt((p/2)*(p/2)-q);
+		x_2=((-p)/2)-sqrt(d);
 		printf("x2=%.2f\n",x_2);
 	}
 	
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 	{
 		printf("d=%.2f\n1 solution\n",d);
 		
-		x_1=((-p)/2)+sqrt((p/2)*(p/2)-q);
+		x_1=((-p)/2)+sqrt(d);
 		printf("x1=%.2f\n",x_1);
 	}
 	
