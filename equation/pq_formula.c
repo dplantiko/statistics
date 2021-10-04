@@ -14,16 +14,18 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 	
-	int x,p,q;
+	float x,p,q,d;
 	
-	p=atoi(argv[1]);
-	q=atoi(argv[2]);
+	p=atof(argv[1]);
+	q=atof(argv[2]);
 
-	printf("p=%d\n",p);
-	printf("q=%d\n",q);
+	printf("p=%f\n",p);
+	printf("q=%f\n",q);
 
 	x=((-p)/2)+sqrt((p/2)*(p/2)-q);
-	printf("x=%d\n");
+	printf("x1=%f\n",x);
+	x=((-p)/2)-sqrt((p/2)*(p/2)-q);
+	printf("x2=%f\n",x);
 
 	return 0;
 }
