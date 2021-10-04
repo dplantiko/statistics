@@ -6,7 +6,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main()
+int main(argc, argv)
 {
+	int x,p,q;
+	
 	return 0;
 }
