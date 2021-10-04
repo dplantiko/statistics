@@ -26,10 +26,10 @@ int main(int argc, char *argv[])
 		printf("d=%f\n2 solutions\n",d);
 		
 		x_1=((-p)/2)+sqrt((p/2)*(p/2)-q);
-		printf("x1=%f\n",x);
+		printf("x1=%f\n",x_1);
 		
 		x_2=((-p)/2)-sqrt((p/2)*(p/2)-q);
-		printf("x2=%f\n",x);
+		printf("x2=%f\n",x_2);
 	}
 	
 	else if(d==0)
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		printf("d=%f\n1 solution\n",d);
 		
 		x_1=((-p)/2)+sqrt((p/2)*(p/2)-q);
-		printf("x1=%f\n",x);
+		printf("x1=%f\n",x_1);
 	}
 	
 	else if(d<0)
