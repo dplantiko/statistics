@@ -1,4 +1,4 @@
-//Solves quadratic equations in form: ax^2+bx+c
+//Solves quadratic equations in form: ax^2+bx+c=0
 //Using midnight formula:
 //x1/2 = ((-b+-)(sqrt((b*b)-(4*a*c)))/2*a
 
