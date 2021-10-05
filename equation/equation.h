@@ -7,16 +7,16 @@ void pq_formula(float p, float q, float *x_1, float *x_2, int *number_of_sol)
 //Calculating discriminant d
 
 	float d=((p/2)*(p/2))-q;
-	
+
 //discriminant > 0
 //Two possible solutions, sqrt of positive number
 	if(d>0)
 	{
         	*number_of_sol=2;
-        
+
         	*x_1=((-p)/2)+sqrt(d);
 		*x_2=((-p)/2)-sqrt(d);
-        
+
 	}
 
 //discriminant = 0
@@ -24,7 +24,7 @@ void pq_formula(float p, float q, float *x_1, float *x_2, int *number_of_sol)
 	else if(d==0)
 	{
         	*number_of_sol=1;
-        
+
         	*x_1=(-p)/2;
 	}
 
@@ -44,30 +44,30 @@ void midnight_formula(float a, float b, float c, float *x_1, float *x_2, int *nu
 
 //Calculating discriminant d
 
-	float d=(b*b)-(4*a*c);
+	float d=b*b-4*a*c;
 
 //discriminant > 0
 //Two possible solutions, sqrt of positive number
 	if(d>0)
 	{
         	*number_of_sol=2;
-        
+
         	*x_1=((-b)+sqrt(d))/(2*a);
 		*x_2=((-b)-sqrt(d))/(2*a);
 	}
 
-//discriminant == 0
+//discriminant = 0
 //One possible solution since sqrt of 0
-	else if(d==0)
+	if(d==0)
 	{
         	*number_of_sol=1;
-        
+
         	*x_1=(-b)/(2*a);
 	}
 
 //discriminant < 0
 //No solution since sqrt of negative number is impossible
-	else if(d<0)
+	if(d<0)
 	{
         	*number_of_sol=0;
 	}
