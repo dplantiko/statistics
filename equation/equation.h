@@ -1,6 +1,5 @@
 //Solves quadratic equations in normal form: x^2+px+q=0
 //Using pq-formula
-
 void pq_formula(float p, float q, float *x_1, float *x_2, int *number_of_sol)
 {
 
@@ -37,7 +36,6 @@ void pq_formula(float p, float q, float *x_1, float *x_2, int *number_of_sol)
 
 //Solves quadratic equations in abc form: ax^2+bx+c=0
 //Using midnight formula
-
 void midnight_formula(float a, float b, float c, float *x_1, float *x_2, int *number_of_sol)
 {
 
