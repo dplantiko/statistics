@@ -1,3 +1,5 @@
+//Solves quadratic equations in normal form: ax^2+bx+c=0
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
