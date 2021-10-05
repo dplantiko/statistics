@@ -5,50 +5,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "equation.h"
 
 int main(int argc, char *argv[])
 {
-	if(argc<=1)
+	if(argc<=2)
 	{
-		fprintf(stderr,"Too less arguments.\n");
-		return 1;
+		fprintf(stderr,"Error:\tNot enough arguments\n");
+		exit(1);
 	}
-	if(argc>3)
+	else if(argc>3)
 	{
-		fprintf(stderr,"Too much arguments.\n");
-		return 1;
+		fprintf(stderr,"Error:\tToo much arguments\n");
+		exit(1);
 	}
-	
-	float x_1,x_2,p,q,d;
-	
+
+	float p,q;
 	p=atof(argv[1]);
 	q=atof(argv[2]);
-	
-	d=((p/2)*(p/2))-q;
-	
-	if(d>0)
+
+	float x_1,x_2;
+	int number_of_sol;
+
+	pq_formula(p,q,&x_1,&x_2,&number_of_sol);
+
+	if(number_of_sol==2)
 	{
-		printf("d=%.2f\n2 solutions\n",d);
-		
-		x_1=((-p)/2)+sqrt(d);
-		printf("x1=%.2f\n",x_1);
-		
-		x_2=((-p)/2)-sqrt(d);
-		printf("x2=%.2f\n",x_2);
+		fprintf(stdout,"x1 = %.2f\tx2 = %.2f\n",x_1,x_2);
 	}
-	
-	else if(d==0)
+	else if(number_of_sol==1)
 	{
-		printf("d=%.2f\n1 solution\n",d);
-		
-		x_1=((-p)/2)+sqrt(d);
-		printf("x1=%.2f\n",x_1);
+		fprintf(stdout,"x1 = %.2f\n",x_1);
 	}
-	
-	else if(d<0)
+	else if(number_of_sol==0)
 	{
-		printf("d=%.2f\nNo solution\n",d);
-		return 1;
+		fprintf(stdout,"N/A\n");
 	}
 
 	return 0;
