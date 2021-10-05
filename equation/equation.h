@@ -54,7 +54,7 @@ void midnight_formula(float a, float b, float c, float *x_1, float *x_2, int *nu
 
 //discriminant = 0
 //One possible solution since sqrt of 0
-	if(d==0)
+	else if(d==0)
 	{
         	*number_of_sol=1;
 
@@ -63,7 +63,7 @@ void midnight_formula(float a, float b, float c, float *x_1, float *x_2, int *nu
 
 //discriminant < 0
 //No solution since sqrt of negative number is impossible
-	if(d<0)
+	else if(d<0)
 	{
         	*number_of_sol=0;
 	}
