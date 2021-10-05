@@ -5,7 +5,6 @@ void pq_formula(float p, float q, float *x_1, float *x_2, int *number_of_sol)
 {
 
 //Calculating discriminant d
-
 	float d=((p/2)*(p/2))-q;
 
 //discriminant > 0
@@ -43,7 +42,6 @@ void midnight_formula(float a, float b, float c, float *x_1, float *x_2, int *nu
 {
 
 //Calculating discriminant d
-
 	float d=b*b-4*a*c;
 
 //discriminant > 0
