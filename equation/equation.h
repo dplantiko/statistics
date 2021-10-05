@@ -21,7 +21,7 @@ void pq_formula(float p, float q, float *x_1, float *x_2)
 //One possible solution since sqrt of 0
 	else if(d==0)
 	{
-		*x_1=x_1=(-p)/2;
+		*x_1=(-p)/2;
 	}
 
 //discriminant < 0
