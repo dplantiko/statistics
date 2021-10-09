@@ -68,3 +68,31 @@ void midnight_formula(float a, float b, float c, float *x_1, float *x_2, int *nu
         	*number_of_sol=0;
 	}
 }
+
+//Check for natural number
+int natural(float n)
+{
+	if(n<0)
+	{
+		return 0;
+	}
+	
+	float y = pow(10,4);
+
+	while(y<n)
+	{
+		n=(n-y);
+	}
+
+	for(n;n>=1;n--);
+
+	if(n>0)
+	{
+		return 0;
+	}
+	else
+	{
+		return 1;
+	}
+}
+
