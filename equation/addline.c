@@ -24,6 +24,14 @@ int main(int argc(),char *argv[])
 		time(&now);
 		fprintf(fptr,"[%d]\t%d\t%s",i,rand(),ctime(&now));
 		sleep(SLEEPTIME);
+	}
+
+	char sen[128];
+
+	for(int i=0;i<max;i++)
+	{
+		fputs
+		fprintf(stdout,"%s\n",sen);
 	}	
 
 	fclose(fptr);
